@@ -45,10 +45,7 @@ def inverseKinematics(x_EE, y_EE, z_EE):
         servoAngle_q3 = q2 - 45 + q3_a
         servoAngle_q3 = round(servoAngle_q3, 2)
         
-        print('Ángulos del servomotor: \n')
-        print(servoAngle_q1)
-        print(servoAngle_q2)
-        print(servoAngle_q3)
+        print("Ángulos del servomotor:",servoAngle_q1, servoAngle_q2, servoAngle_q3)
 
         return servoAngle_q1, servoAngle_q2, servoAngle_q3
 
@@ -71,9 +68,7 @@ def forwardKinematics(A1,A2,A3):
         z_EE = round((L1 + sin(q2)*L2 + sin(q2+q3)*L3), 3)
         
         
-        print('Posición efector: \n')
-        print(x_EE)
-        print(y_EE)
-        print(z_EE)
+        print("Posición efector:", x_EE,y_EE,z_EE)
+
  
         return x_EE, y_EE, z_EE
