@@ -1,5 +1,5 @@
 from myservo import myServo
-from intento_funciones import inverseKinematics
+from funciones import inverseKinematics
 import time
 
 servo1 = myServo(4)

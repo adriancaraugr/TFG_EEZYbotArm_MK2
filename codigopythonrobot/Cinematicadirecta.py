@@ -1,6 +1,6 @@
 from myservo import myServo
-from intento_funciones import forwardKinematics
-from intento_funciones import inverseKinematics
+from funciones import forwardKinematics
+from funciones import inverseKinematics
 import time
 servo1=myServo(4)
 servo2=myServo(5)
@@ -40,10 +40,9 @@ def move(c_init, c_fin, i):
 def inangulo():
     angulos = []
     try:
-        print("Ingresa los angulos de 'pinza.base.brazo.codo' (ejemplo: 90.90.150.90):")
         while True:
             try:
-                pos = input()
+                pos = input("Ingresa los angulos de 'pinza.base.brazo.codo' (ejemplo: 90.90.150.90):")
                 angulos = pos.split(".")
                 if len(angulos) != 4:
                     raise ValueError("Debes ingresar exactamente 4 valores separados por puntos.")
@@ -61,9 +60,7 @@ while True:
     A2=int(angulos[1])
     A3=int(angulos[2])
     A4=int(angulos[3])
-    print(angulos)
-    posiciones=forwardKinematics(A2,A3,A4)
-    print(posiciones)      
+    posiciones=forwardKinematics(A2,A3,A4)     
     for n in range(4):
         if n==0:
             move(A1_init,A1,0)
@@ -77,5 +74,5 @@ while True:
     A2_init=A2
     A3_init=A3
     A4_init=A4
-    print(A1,A2,A3,A4)
+    print("Ángulos servomotores:",A1,A2,A3,A4)
     

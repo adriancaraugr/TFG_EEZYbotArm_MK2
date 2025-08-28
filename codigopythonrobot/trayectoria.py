@@ -1,5 +1,5 @@
 from myservo import myServo
-from intento_funciones import inverseKinematics
+from funciones import inverseKinematics
 import time
 #Inicialización de los servos
 servo1 = myServo(4)
@@ -83,7 +83,6 @@ def posicion(x, y, z, pinz, A1_init, A2_init, A3_init, A4_init):
         finales = [A2, A3, A4, A1]
         servos = [servo2, servo3, servo4, servo1]
         mover_servos_juntos(iniciales, finales, servos)
-        print(f"Ángulos ejecutados: {A1}, {A2}, {A3}, {A4}")
         time.sleep(1)
         return A1, A2, A3, A4
     except Exception as e:
