@@ -10,7 +10,7 @@ El código generado para el movimiento del robot es mío, pero para las funcione
 Para controlar el robot es usado una ESP32 y el entorno Thonny para trabajar con MicroPython.
 
 ## Simulación
-Para la simulación se ha usado la librería **Robotics Toolbox for Pyhton** de **PeterCorke** https://github.com/petercorke/robotics-toolbox-python. El código de la siulación es propio pero usa esta librería.
+Para la simulación se ha usado la librería **Robotics Toolbox for Pyhton** de **PeterCorke** https://github.com/petercorke/robotics-toolbox-python. El código de la simulación es propio pero usa esta librería.
 En la parte de cinemática inversa la simulación sufre problemas pues esta librería necesita calcular a partir de posición y orientación para robots de 6GDL.
 
 
